@@ -1,9 +1,10 @@
+import torch
 import pytorch_lightning as pl
 from torchvision.models.alexnet import AlexNet
 
 
 class Model(pl.LightningModule):
-    def __init__(self, num_classes=10, dropout=0.5, lr=0.01):
+    def __init__(self, num_classes: int = 10, dropout: float = 0.5, lr: float = 0.01):
         super().__init__()
         self.alexnet = AlexNet(num_classes, dropout)
         self.lr = lr
