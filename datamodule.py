@@ -34,7 +34,12 @@ class SpeechCommandDataModule(pl.LightningDataModule):
         )
 
     def __collate_fn(self, batch):
-        mel_specs = [self.transform(i[0]).squeeze().permute(1, 0) for i in batch]
+        mel_specs = [
+            self.transform(
+                i[0]
+            ).squeeze().permute(1, 0)
+            for i in batch
+        ]
         labels = torch.LongTensor([labels2int.get(i[2]) for i in batch])
 
         mel_specs = pad_sequence(mel_specs, batch_first=True)
