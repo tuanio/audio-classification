@@ -1,9 +1,9 @@
-from torch.utils.data import DataLoader
-import pytorch_lightning as pl
-from torchaudio.datasets import SPEECHCOMMANDS
-import torchaudio.transforms as T
-from torch.nn.utils.rnn import pad_sequence
 from utils import labels2int
+import pytorch_lightning as pl
+import torchaudio.transforms as T
+from torch.utils.data import DataLoader
+from torchaudio.datasets import SPEECHCOMMANDS
+from torch.nn.utils.rnn import pad_sequence
 
 
 class SpeechCommandDataModule(pl.LightningDataModule):

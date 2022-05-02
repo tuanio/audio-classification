@@ -1,3 +1,4 @@
+import pytorch_lightning as pl
 from torchvision.models.alexnet import AlexNet
 
 
