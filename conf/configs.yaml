@@ -9,7 +9,7 @@ model:
   lr: 0.001
 
 logger:
-  savedir: tb_logs
+  save_dir: tb_logs
   name: alexnet_logs
 
 trainer:
