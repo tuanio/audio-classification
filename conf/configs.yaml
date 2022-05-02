@@ -13,6 +13,6 @@ logger:
   name: alexnet_logs
 
 trainer:
-  max_epoch: 20
+  max_epochs: 20
   accelerator: gpu
   gpus: 1
