@@ -9,3 +9,6 @@
 
 ![alexnet](assets/alexnet.png)
 
+## How to use this respository?
+- Edit your configuration in `conf/configs.yaml`
+- Train model using `python main.py -cp conf -cn configs`
