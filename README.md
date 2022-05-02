@@ -6,5 +6,5 @@
 ## Model Architecture
 Using AlexNet with Mel Spectrogram 1 channel.
 
-[alexnet](assets/alexnet.png)
+![alexnet](assets/alexnet.png)
 
