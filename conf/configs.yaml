@@ -1,5 +1,5 @@
 datamodule:
-  root: speechcommands/
+  root: ./
   batch_size: 64
   n_fft: 200
 
@@ -14,5 +14,6 @@ logger:
 
 trainer:
   max_epochs: 20
-  accelerator: gpu
-  gpus: 1
+  accelerator: cpu
+  # accelerator: gpu
+  # gpus: 1
