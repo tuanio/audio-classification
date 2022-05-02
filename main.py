@@ -1,4 +1,5 @@
 import hydra
+import argparse
 from omegaconf import OmegaConf, DictConfig
 from datamodule import SpeechCommandDataModule
 from model import Model
