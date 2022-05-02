@@ -1,0 +1,18 @@
+datamodule:
+  root: speechcommands/
+  batch_size: 64
+  n_fft: 200
+
+model:
+  num_classes: 35
+  dropout: 0.5
+  lr: 0.001
+
+logger:
+  savedir: tb_logs
+  name: alexnet_logs
+
+trainer:
+  max_epoch: 20
+  accelerator: gpu
+  gpus: 1
