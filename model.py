@@ -7,8 +7,8 @@ from torchvision.models.alexnet import AlexNet
 class Model(pl.LightningModule):
     def __init__(self, num_classes: int = 10, dropout: float = 0.5, lr: float = 0.01):
         super().__init__()
-        model = AlexNet(num_classes=num_classes, dropout=dropout)
-        self.alexnet = model
+        print(AlexNet())
+        self.alexnet = AlexNet(num_classes=num_classes, dropout=dropout)
         self.lr = lr
 
     def forward(self, x: torch.Tensor):
