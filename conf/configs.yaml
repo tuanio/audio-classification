@@ -1,7 +1,8 @@
 datamodule:
-  root: ./
+  root: D:\My projects\audio classification speech commands\
   batch_size: 64
   n_fft: 200
+  pin_memory: False # True if gpu
 
 model:
   num_classes: 35
@@ -14,6 +15,8 @@ logger:
 
 trainer:
   max_epochs: 20
-  accelerator: cpu
+  accelerator: auto
+  devices: 1
+  num_nodes: 1
   # accelerator: gpu
   # gpus: 1
