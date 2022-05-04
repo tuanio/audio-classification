@@ -15,8 +15,9 @@ class Model(pl.LightningModule):
         return output.argmax(dim=-1)
 
     def configure_optimizers(self):
-        optimizer = torch.optim.Adam(self.parameters(), lr=self.lr)
-        return optimizer
+        optimizer = torch.optim.Adam(self.parameters(), lr=self.lr, weight_decay=0.0001)
+        scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=5, gamma=0.1)
+        return [optimizer], [scheduler]
 
     def training_step(self, batch, batch_idx):
         x, y = batch
