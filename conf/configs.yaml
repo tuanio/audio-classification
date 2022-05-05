@@ -2,7 +2,7 @@ datamodule:
   root: /kaggle/working/
   batch_size: 64
   n_fft: 200
-  pin_memory: False # True if gpu
+  pin_memory: True # True if gpu
 
 model:
   num_classes: 35
