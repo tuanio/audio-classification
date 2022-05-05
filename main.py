@@ -2,7 +2,7 @@ import hydra
 import argparse
 from omegaconf import OmegaConf, DictConfig
 from datamodule import SpeechCommandDataModule
-from model import Model
+from model import ModelModule
 import pytorch_lightning as pl
 
 if __name__ == "__main__":
@@ -16,7 +16,7 @@ if __name__ == "__main__":
     @hydra.main(config_path=args.cp, config_name=args.cn)
     def main(cfg: DictConfig):
         dm = SpeechCommandDataModule(**cfg.datamodule)
-        model = Model(**cfg.model)
+        model = ModelModule(**cfg.model)
 
         logger = pl.loggers.tensorboard.TensorBoardLogger(**cfg.logger)
 

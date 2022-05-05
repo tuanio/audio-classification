@@ -4,7 +4,7 @@ import pytorch_lightning as pl
 from torchvision.models.alexnet import AlexNet
 
 
-class Model(pl.LightningModule):
+class ModelModule(pl.LightningModule):
     def __init__(
         self,
         num_classes: int = 10,
