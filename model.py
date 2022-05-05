@@ -10,14 +10,12 @@ class ModelModule(pl.LightningModule):
         num_classes: int = 10,
         dropout: float = 0.5,
         lr: float = 0.01,
-        optim_configs: dict = {},
-        sched_configs: dict = {},
+        optim_configs: dict = {}
     ):
         super().__init__()
         self.alexnet = AlexNet(num_classes=num_classes, dropout=dropout)
         self.lr = lr
         self.optim_configs = optim_configs
-        self.sched_configs = sched_configs
 
     def forward(self, x: torch.Tensor):
         output = self.alexnet(x)
@@ -27,8 +25,7 @@ class ModelModule(pl.LightningModule):
         optimizer = torch.optim.Adam(
             self.parameters(), lr=self.lr, **self.optim_configs
         )
-        scheduler = torch.optim.lr_scheduler.StepLR(optimizer, **self.sched_configs)
-        return [optimizer], [scheduler]
+        return optimizer
 
     def training_step(self, batch, batch_idx):
         x, y = batch
