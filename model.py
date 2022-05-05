@@ -45,6 +45,7 @@ class ModelModule(pl.LightningModule):
         out = self.alexnet(x)
         loss = nn.functional.cross_entropy(out, y)
         pred = out.argmax(dim=-1)
+
         acc = (pred == y).sum() / y.size(0)
 
         self.log("val_loss", loss.item())
