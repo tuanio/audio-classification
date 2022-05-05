@@ -46,7 +46,6 @@ class SpeechCommandDataModule(pl.LightningDataModule):
             batch_size=self.batch_size,
             collate_fn=self.__collate_fn,
             pin_memory=self.pin_memory,
-            shuffle=True,
         )
 
     def test_dataloader(self):
@@ -55,7 +54,6 @@ class SpeechCommandDataModule(pl.LightningDataModule):
             batch_size=self.batch_size,
             collate_fn=self.__collate_fn,
             pin_memory=self.pin_memory,
-            shuffle=True,
         )
 
     def __collate_fn(self, batch):
