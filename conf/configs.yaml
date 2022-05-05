@@ -1,6 +1,6 @@
 datamodule:
   root: /kaggle/working/
-  batch_size: 64
+  batch_size: 128
   n_fft: 200
   pin_memory: True # True if gpu
 
