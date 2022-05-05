@@ -16,5 +16,5 @@ logger:
   name: alexnet_logs
 
 trainer:
-  max_epochs: 5
+  max_epochs: 10
   accelerator: auto
