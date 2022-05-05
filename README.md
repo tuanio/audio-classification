@@ -12,3 +12,6 @@
 ## How to use this respository?
 - Edit your configuration in `conf/configs.yaml`
 - Train model using `python main.py -cp conf -cn configs`
+
+## Additional
+- You guys should install `PySoundFile` on windows or `sox` on linux, for torchaudio I/O backend.

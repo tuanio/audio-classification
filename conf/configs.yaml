@@ -1,5 +1,5 @@
 datamodule:
-  root: D:\My projects\audio classification speech commands\
+  root: D:\My projects\audio classification speech commands\ # /kaggle/working/
   batch_size: 64
   n_fft: 200
   pin_memory: False # True if gpu

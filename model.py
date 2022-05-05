@@ -25,6 +25,7 @@ class Model(pl.LightningModule):
         loss = nn.functional.cross_entropy(out, y)
 
         self.log("train_loss", loss.item())
+        self.log("lr", self.lr)
 
         return loss
 
